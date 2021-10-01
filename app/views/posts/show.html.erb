@@ -5,7 +5,9 @@
     </div>
     <div class="row justify-content-center d-block">
       <p class="caption">ユーザ名</p>
-
+      <% if @post.image.attached? %>
+        <%= image_tag @post.image, size:"400x300" %>
+      <% end %>
       <p class="caption"><%= @post.location %></p>
       <h2>感想</h2>
       <p id="text"><%= @post.text %></p>
